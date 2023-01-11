@@ -1,0 +1,5 @@
+rootProject.name = 'root'
+
+include 'gradle'
+
+project(":gradle").name = "unity"

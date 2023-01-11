@@ -1,0 +1,4 @@
+allprojects {
+    group = 'org.throwtheswitch'
+    version = 'v2.5.2'
+}

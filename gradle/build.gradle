@@ -1,0 +1,17 @@
+
+plugins {
+    id 'dev.guillermo.gradle.c-library' version '0.3.0'
+}
+
+library {
+    linkage = [Linkage.STATIC]
+	publicHeaders.from "../src"
+    binaries.configureEach {
+        compileTask.get().source.from fileTree(dir: "../src", include: "**/*.c")
+    }
+}
+
+compiler{
+    dialect = 'C11'
+	failOnWarning = true
+}
